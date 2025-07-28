@@ -190,7 +190,7 @@
 
   @keyframes slideUpCloser {
     0% {
-      transform: translateY(50vh);
+      transform: translateY(30vh);
     }
     100% {
       transform: translateY(0);
@@ -251,5 +251,33 @@
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .glass {
+      backdrop-filter: blur(15px);
+    }
+    
+    .glass-subtle {
+      backdrop-filter: blur(8px);
+    }
+  }
+
+  /* Ensure text remains readable on small screens */
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    
+    .animate-slide-up,
+    .animate-slide-up-delayed {
+      animation-duration: 0.4s;
+    }
+    
+    .animate-fade-in {
+      animation-delay: 0.8s;
+      animation-duration: 0.6s;
+    }
   }
 }

@@ -22,19 +22,19 @@ const Header = () => {
         isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
       }`}
     >
-      <div className="glass px-6 py-4">
+      <div className="glass px-4 sm:px-6 py-3 sm:py-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               {/* AI Logo Square */}
-              <div className="w-12 h-12 bg-primary flex items-center justify-center rounded-lg animate-glow">
-                <span className="text-primary-foreground font-bold text-lg">AI</span>
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary flex items-center justify-center rounded-lg animate-glow">
+                <span className="text-primary-foreground font-bold text-base sm:text-lg">AI</span>
               </div>
               
               {/* Logo Text */}
               <div className="text-foreground">
-                <div className="text-xl font-semibold">Email</div>
-                <div className="text-lg font-normal -mt-1">Generator</div>
+                <div className="text-lg sm:text-xl font-semibold">Email</div>
+                <div className="text-base sm:text-lg font-normal -mt-1">Generator</div>
               </div>
             </div>
           </div>
