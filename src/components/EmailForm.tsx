@@ -101,8 +101,8 @@ ${formData.sender_name}`;
   };
 
   return (
-    <div className="glass rounded-2xl p-8 max-w-2xl">
-      <h2 className="text-3xl font-semibold text-foreground mb-8 text-center">AI Email Generator</h2>
+    <div className="glass-subtle rounded-2xl p-8 max-w-2xl font-georgia bg-white/90">
+      <h2 className="text-3xl font-semibold text-foreground mb-8 text-center font-georgia">AI Email Generator</h2>
       
       <form onSubmit={generateEmail} className="space-y-6">
         {/* Recipient Details Row */}
@@ -112,13 +112,13 @@ ${formData.sender_name}`;
             value={formData.recipient_name}
             onChange={(e) => handleInputChange('recipient_name', e.target.value)}
             required
-            className="glass-subtle border-0 bg-card/50 text-foreground placeholder:text-muted-foreground"
+            className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia"
           />
           <Input
             placeholder="Recipient's Designation/Role"
             value={formData.recipient_designation}
             onChange={(e) => handleInputChange('recipient_designation', e.target.value)}
-            className="glass-subtle border-0 bg-card/50 text-foreground placeholder:text-muted-foreground"
+            className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia"
           />
         </div>
 
@@ -128,7 +128,7 @@ ${formData.sender_name}`;
           value={formData.subject}
           onChange={(e) => handleInputChange('subject', e.target.value)}
           required
-          className="glass-subtle border-0 bg-card/50 text-foreground placeholder:text-muted-foreground"
+          className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia"
         />
 
         {/* Email Purpose */}
@@ -138,7 +138,7 @@ ${formData.sender_name}`;
           onChange={(e) => handleInputChange('purpose', e.target.value)}
           required
           rows={4}
-          className="glass-subtle border-0 bg-card/50 text-foreground placeholder:text-muted-foreground resize-none"
+          className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all resize-none font-georgia"
         />
 
         {/* CTA and Sender Row */}
@@ -147,24 +147,24 @@ ${formData.sender_name}`;
             placeholder="Prompts (CTA)"
             value={formData.cta}
             onChange={(e) => handleInputChange('cta', e.target.value)}
-            className="glass-subtle border-0 bg-card/50 text-foreground placeholder:text-muted-foreground"
+            className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia"
           />
           <Input
             placeholder="Sender's Name"
             value={formData.sender_name}
             onChange={(e) => handleInputChange('sender_name', e.target.value)}
             required
-            className="glass-subtle border-0 bg-card/50 text-foreground placeholder:text-muted-foreground"
+            className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia"
           />
         </div>
 
         {/* Tone and Closing Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Select value={formData.tone} onValueChange={(value) => handleInputChange('tone', value)}>
-            <SelectTrigger className="glass-subtle border-0 bg-card/50 text-foreground">
+            <SelectTrigger className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 font-georgia">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="glass border-0">
+            <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia">
               <SelectItem value="Formal">Formal</SelectItem>
               <SelectItem value="Semi-formal">Semi-formal</SelectItem>
               <SelectItem value="Casual">Casual</SelectItem>
@@ -172,10 +172,10 @@ ${formData.sender_name}`;
           </Select>
 
           <Select value={formData.closing} onValueChange={(value) => handleInputChange('closing', value)}>
-            <SelectTrigger className="glass-subtle border-0 bg-card/50 text-foreground">
+            <SelectTrigger className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 focus:border-purple-600 font-georgia">
               <SelectValue />
             </SelectTrigger>
-            <SelectContent className="glass border-0">
+            <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia">
               <SelectItem value="Best regards,">Best regards,</SelectItem>
               <SelectItem value="Sincerely,">Sincerely,</SelectItem>
               <SelectItem value="Thanks,">Thanks,</SelectItem>
@@ -188,7 +188,10 @@ ${formData.sender_name}`;
         <Button
           type="submit"
           disabled={isGenerating}
-          className="w-full py-6 text-lg font-semibold rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]"
+          className="w-full py-4 text-lg font-semibold rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 font-georgia uppercase tracking-wider mt-4"
+          style={{
+            background: 'linear-gradient(135deg, #3B0764, #B32C76)',
+          }}
         >
           {isGenerating ? 'Generating...' : 'Generate Email'}
         </Button>
@@ -202,20 +205,20 @@ ${formData.sender_name}`;
             placeholder="Generated Email will appear here..."
             readOnly
             rows={10}
-            className="glass-subtle border-0 bg-card/30 text-foreground placeholder:text-muted-foreground resize-none pr-12"
+            className="border-2 border-gray-200 rounded-xl px-4 py-3 bg-gray-50/90 resize-none pr-12 font-georgia text-sm leading-relaxed tracking-wide"
           />
           {generatedEmail && (
             <Button
               onClick={copyToClipboard}
               variant="ghost"
               size="sm"
-              className="absolute top-3 right-3 p-2 hover:bg-accent/20"
+              className="absolute top-3 right-3 p-2 bg-white/80 border border-gray-200 rounded-lg hover:bg-white hover:shadow-md transition-all duration-300"
               title="Copy to clipboard"
             >
               {isCopied ? (
-                <CheckCircle className="h-5 w-5 text-green-400" />
+                <CheckCircle className="h-5 w-5 text-green-500" />
               ) : (
-                <Copy className="h-5 w-5 text-muted-foreground" />
+                <Copy className="h-5 w-5 text-gray-600" />
               )}
             </Button>
           )}

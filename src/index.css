@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Main colors */
-    --background: 240 10% 3.9%;
+    /* Main colors - Purple theme */
+    --background: 276 89% 20%;
     --foreground: 0 0% 98%;
 
     /* Glass effects */
@@ -41,15 +41,17 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(260 15% 8%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 70% 15%), hsl(240 50% 25%));
+    /* Gradients - Purple theme */
+    --gradient-primary: linear-gradient(90deg, hsl(276 89% 20%), hsl(329 67% 46%));
+    --gradient-hero: linear-gradient(90deg, hsl(276 89% 20%), hsl(329 67% 46%));
     --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
+    --gradient-button: linear-gradient(135deg, hsl(276 89% 20%), hsl(329 67% 46%));
 
     /* Shadows */
     --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.37);
     --shadow-glow: 0 0 40px hsl(220 100% 70% / 0.3);
     --shadow-button: 0 4px 15px hsl(0 0% 0% / 0.2);
+    --shadow-elegant: 0 10px 30px hsl(276 89% 20% / 0.1);
 
     --radius: 1rem;
 
@@ -159,6 +161,91 @@
     50% {
       transform: translateY(-10px);
     }
+  }
+
+  /* Enhanced Animations */
+  .animate-slide-up {
+    animation: slideUpCloser 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up-delayed {
+    animation: slideUpCloser 0.6s ease-out 0.1s forwards;
+  }
+
+  .animate-drop-ai {
+    animation: dropAI 0.5s ease-in 0.7s forwards;
+  }
+
+  .animate-slide-up-text {
+    animation: slideUpText 0.6s ease-out forwards;
+  }
+
+  .animate-slide-up-text-delayed {
+    animation: slideUpText 0.6s ease-out 0.4s forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out 1.2s forwards;
+  }
+
+  @keyframes slideUpCloser {
+    0% {
+      transform: translateY(50vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dropAI {
+    0% {
+      transform: translateY(-150%);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(10%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUpText {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Font families */
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-georgia {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  /* Email form specific styles */
+  .email-section {
+    background-color: rgba(59, 7, 100, 0.05);
   }
 
   /* Smooth scrolling */
