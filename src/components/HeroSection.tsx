@@ -26,7 +26,7 @@ const HeroSection = () => {
           <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight">
             One Tool, Every Email:
             <br />
-            <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-pink-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-600 via-yellow-600 to-amber-500 bg-clip-text text-transparent">
               Personal, Professional, Perfected by AI
             </span>
           </h1>

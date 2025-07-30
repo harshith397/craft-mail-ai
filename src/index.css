@@ -6,19 +6,19 @@
 
 @layer base {
   :root {
-    /* Main colors - Purple theme */
-    --background: 276 89% 20%;
-    --foreground: 0 0% 98%;
+    /* Main colors - Cream theme */
+    --background: 63 34% 87%;
+    --foreground: 0 0% 15%;
 
     /* Glass effects */
-    --glass-bg: 0 0% 100% / 0.1;
-    --glass-border: 0 0% 100% / 0.2;
-    --glass-shadow: 0 25% 50% / 0.15;
+    --glass-bg: 63 34% 87% / 0.1;
+    --glass-border: 63 34% 87% / 0.3;
+    --glass-shadow: 63 25% 70% / 0.15;
 
     /* Primary colors - AI theme */
     --primary: 0 0% 0%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 220 100% 70%;
+    --primary-glow: 63 50% 75%;
 
     /* Secondary colors */
     --secondary: 240 4.8% 95.9%;
@@ -41,17 +41,17 @@
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
 
-    /* Gradients - Purple theme */
-    --gradient-primary: linear-gradient(90deg, hsl(276 89% 20%), hsl(329 67% 46%));
-    --gradient-hero: linear-gradient(90deg, hsl(276 89% 20%), hsl(329 67% 46%));
-    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
-    --gradient-button: linear-gradient(135deg, hsl(276 89% 20%), hsl(329 67% 46%));
+    /* Gradients - Cream theme */
+    --gradient-primary: linear-gradient(90deg, hsl(63 34% 87%), hsl(63 25% 75%));
+    --gradient-hero: linear-gradient(90deg, hsl(63 34% 87%), hsl(63 25% 75%));
+    --gradient-glass: linear-gradient(135deg, hsl(63 34% 87% / 0.1), hsl(63 34% 87% / 0.05));
+    --gradient-button: linear-gradient(135deg, hsl(63 34% 87%), hsl(63 25% 75%));
 
     /* Shadows */
-    --shadow-glass: 0 8px 32px hsl(0 0% 0% / 0.37);
-    --shadow-glow: 0 0 40px hsl(220 100% 70% / 0.3);
-    --shadow-button: 0 4px 15px hsl(0 0% 0% / 0.2);
-    --shadow-elegant: 0 10px 30px hsl(276 89% 20% / 0.1);
+    --shadow-glass: 0 8px 32px hsl(63 25% 70% / 0.2);
+    --shadow-glow: 0 0 40px hsl(63 50% 75% / 0.3);
+    --shadow-button: 0 4px 15px hsl(63 25% 70% / 0.2);
+    --shadow-elegant: 0 10px 30px hsl(63 34% 87% / 0.1);
 
     --radius: 1rem;
 
@@ -245,7 +245,7 @@
 
   /* Email form specific styles */
   .email-section {
-    background-color: rgba(59, 7, 100, 0.05);
+    background-color: hsl(63 34% 87% / 0.05);
   }
 
   /* Smooth scrolling */
