@@ -102,7 +102,7 @@ ${formData.sender_name}`;
 
   return (
     <div className="glass-subtle rounded-2xl p-4 sm:p-6 lg:p-8 w-full font-georgia bg-white/90">
-      <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-6 sm:mb-8 text-center font-georgia">AI Email Generator</h2>
+      <h2 className="text-2xl sm:text-3xl font-semibold text-foreground mb-6 sm:mb-8 text-center font-sans">AI Email Generator</h2>
       
       <form onSubmit={generateEmail} className="space-y-4 sm:space-y-6">
         {/* Recipient Details Row */}
@@ -188,7 +188,10 @@ ${formData.sender_name}`;
         <Button
           type="submit"
           disabled={isGenerating}
-          className="w-full py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 font-georgia uppercase tracking-wider mt-4 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700"
+          className="w-full py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 font-sans uppercase tracking-wider mt-4"
+          style={{backgroundColor: '#B85042'}}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#A0453A'}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#B85042'}
         >
           {isGenerating ? 'Generating...' : 'Generate Email'}
         </Button>
