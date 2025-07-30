@@ -112,13 +112,13 @@ ${formData.sender_name}`;
             value={formData.recipient_name}
             onChange={(e) => handleInputChange('recipient_name', e.target.value)}
             required
-            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia text-sm sm:text-base"
+            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all font-georgia text-sm sm:text-base"
           />
           <Input
             placeholder="Recipient's Designation/Role"
             value={formData.recipient_designation}
             onChange={(e) => handleInputChange('recipient_designation', e.target.value)}
-            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia text-sm sm:text-base"
+            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all font-georgia text-sm sm:text-base"
           />
         </div>
 
@@ -128,7 +128,7 @@ ${formData.sender_name}`;
           value={formData.subject}
           onChange={(e) => handleInputChange('subject', e.target.value)}
           required
-          className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia text-sm sm:text-base"
+          className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all font-georgia text-sm sm:text-base"
         />
 
         {/* Email Purpose */}
@@ -138,7 +138,7 @@ ${formData.sender_name}`;
           onChange={(e) => handleInputChange('purpose', e.target.value)}
           required
           rows={3}
-          className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all resize-none font-georgia text-sm sm:text-base"
+          className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all resize-none font-georgia text-sm sm:text-base"
         />
 
         {/* CTA and Sender Row */}
@@ -147,21 +147,21 @@ ${formData.sender_name}`;
             placeholder="Prompts (CTA)"
             value={formData.cta}
             onChange={(e) => handleInputChange('cta', e.target.value)}
-            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia text-sm sm:text-base"
+            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all font-georgia text-sm sm:text-base"
           />
           <Input
             placeholder="Sender's Name"
             value={formData.sender_name}
             onChange={(e) => handleInputChange('sender_name', e.target.value)}
             required
-            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 focus:ring-2 focus:ring-purple-100 transition-all font-georgia text-sm sm:text-base"
+            className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all font-georgia text-sm sm:text-base"
           />
         </div>
 
         {/* Tone and Closing Row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <Select value={formData.tone} onValueChange={(value) => handleInputChange('tone', value)}>
-            <SelectTrigger className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 font-georgia text-sm sm:text-base">
+            <SelectTrigger className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 font-georgia text-sm sm:text-base">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia text-sm sm:text-base">
@@ -172,7 +172,7 @@ ${formData.sender_name}`;
           </Select>
 
           <Select value={formData.closing} onValueChange={(value) => handleInputChange('closing', value)}>
-            <SelectTrigger className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-purple-600 font-georgia text-sm sm:text-base">
+            <SelectTrigger className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 font-georgia text-sm sm:text-base">
               <SelectValue />
             </SelectTrigger>
             <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia text-sm sm:text-base">
@@ -188,10 +188,7 @@ ${formData.sender_name}`;
         <Button
           type="submit"
           disabled={isGenerating}
-          className="w-full py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 font-georgia uppercase tracking-wider mt-4"
-          style={{
-            background: 'linear-gradient(135deg, #3B0764, #B32C76)',
-          }}
+          className="w-full py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 font-georgia uppercase tracking-wider mt-4 bg-gradient-to-r from-amber-600 to-yellow-600 hover:from-amber-700 hover:to-yellow-700"
         >
           {isGenerating ? 'Generating...' : 'Generate Email'}
         </Button>
