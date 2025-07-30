@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   return (
     <div className="glass-subtle rounded-2xl p-4 sm:p-6 lg:p-8 h-fit lg:sticky lg:top-24 font-georgia">
-      <h2 className="text-xl sm:text-2xl font-semibold text-foreground mb-4 sm:mb-6 text-center font-sans">How To Use</h2>
+      <h2 className="text-xl sm:text-2xl font-light text-foreground mb-4 sm:mb-6 text-center">How To Use</h2>
       <div className="space-y-3 sm:space-y-4">
         {steps.map((step, index) => (
           <div key={index} className="group p-2 sm:p-3 rounded-lg border-l-4 border-amber-600 bg-gradient-to-r from-amber-50/10 to-yellow-50/10 hover:from-amber-50/20 hover:to-yellow-50/20 transition-all duration-300 hover:translate-x-1">
