@@ -146,11 +146,12 @@ ${formData.sender_name}`;
 
             {/* CTA and Sender Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-              <Input
+              <Textarea
                 placeholder="Prompts (CTA)"
                 value={formData.cta}
                 onChange={(e) => handleInputChange('cta', e.target.value)}
-                className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all font-georgia text-sm sm:text-base"
+                rows={3}
+                className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 focus:ring-2 focus:ring-amber-100 transition-all resize-none font-georgia text-sm sm:text-base"
               />
               <Input
                 placeholder="Sender's Name"
@@ -167,7 +168,7 @@ ${formData.sender_name}`;
                 <SelectTrigger className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 font-georgia text-sm sm:text-base">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia text-sm sm:text-base">
+                <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia text-sm sm:text-base z-50 shadow-lg">
                   <SelectItem value="Formal">Formal</SelectItem>
                   <SelectItem value="Semi-formal">Semi-formal</SelectItem>
                   <SelectItem value="Casual">Casual</SelectItem>
@@ -178,7 +179,7 @@ ${formData.sender_name}`;
                 <SelectTrigger className="border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-3 bg-gray-50/90 focus:border-amber-600 font-georgia text-sm sm:text-base">
                   <SelectValue />
                 </SelectTrigger>
-                <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia text-sm sm:text-base">
+                <SelectContent className="bg-white border-2 border-gray-200 rounded-xl font-georgia text-sm sm:text-base z-50 shadow-lg">
                   <SelectItem value="Best regards,">Best regards,</SelectItem>
                   <SelectItem value="Sincerely,">Sincerely,</SelectItem>
                   <SelectItem value="Thanks,">Thanks,</SelectItem>
