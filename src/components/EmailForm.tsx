@@ -102,7 +102,7 @@ ${formData.sender_name}`;
 
   return (
     <div className="glass-subtle rounded-2xl p-4 sm:p-6 lg:p-8 w-full font-georgia bg-white/90">
-      <h2 className="text-2xl sm:text-3xl font-light text-foreground mb-6 sm:mb-8 text-center">Email Generator</h2>
+      <h2 className="text-2xl sm:text-3xl font-light text-foreground mb-6 sm:mb-8 text-center font-sans">Email Generator</h2>
       
       <form onSubmit={generateEmail} className="space-y-4 sm:space-y-6">
         {/* Recipient Details Row */}
@@ -188,7 +188,7 @@ ${formData.sender_name}`;
         <Button
           type="submit"
           disabled={isGenerating}
-          className="w-full py-3 sm:py-4 text-base sm:text-lg font-light rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 tracking-wider mt-4"
+          className="w-full py-3 sm:py-4 text-base sm:text-lg font-light rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 tracking-wider mt-4 font-sans"
           style={{background: 'linear-gradient(90deg, #f2f4c3, #ffa937)'}}
           onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(90deg, #e8ea9f, #e6941a)'}
           onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(90deg, #f2f4c3, #ffa937)'}
