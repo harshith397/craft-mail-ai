@@ -203,7 +203,6 @@ ${formData.sender_name}`;
 
         {/* Generated Email Display Section */}
         <div className="lg:h-full flex flex-col">
-          <h3 className="text-lg sm:text-xl font-light text-foreground mb-4 font-sans">Generated Email</h3>
           <div className="relative flex-1">
             <Textarea
               value={generatedEmail}
