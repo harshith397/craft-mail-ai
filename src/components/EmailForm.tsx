@@ -191,7 +191,7 @@ ${formData.sender_name}`;
             <Button
               type="submit"
               disabled={isGenerating}
-              className="w-full py-3 sm:py-4 text-base sm:text-lg font-light rounded-xl text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 tracking-wider mt-4 font-sans"
+              className="w-full py-3 sm:py-4 text-base sm:text-lg font-light rounded-xl text-black border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 tracking-wider mt-4 font-sans"
               style={{background: 'linear-gradient(90deg, #f2f4c3, #ffa937)'}}
               onMouseEnter={(e) => e.currentTarget.style.background = 'linear-gradient(90deg, #e8ea9f, #e6941a)'}
               onMouseLeave={(e) => e.currentTarget.style.background = 'linear-gradient(90deg, #f2f4c3, #ffa937)'}
